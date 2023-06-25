@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppConText, { ConText } from "./context/AppConText";
+import { Route, Router, Routes } from "react-router-dom";
+
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
@@ -7,22 +7,25 @@ import NewsLetter from "./components/footer/newsletter/Newsletter";
 import Products from "./pages/products/Products";
 import Details from "./pages/details/Details";
 import Cart from "./pages/cart/Cart";
+import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <AppConText>
-      <BrowserRouter>
-        <Header />
+    <>
+    <Wrapper>
+      <Header />
+   
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
-        <NewsLetter />
-        <Footer />
-      </BrowserRouter>
-    </AppConText>
+  
+      <NewsLetter />
+      <Footer />
+      </Wrapper>
+    </>
   );
 }
 

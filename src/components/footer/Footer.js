@@ -19,12 +19,13 @@ const Footer = () => {
             In Vietnam, Zippo lighters were known through the wars, through
             these periods Zippo lighters followed the baggage with hundreds of
             thousands of American soldiers imported into Vietnam, and from here
-            the Zippo brand was known. . Since the US lifted the embargo on
-            Vietnam and normalized relations between the two countries in 1994,
+            the Zippo brand was known. 
+            {/* . Since the US lifted the embargo on */}
+            {/* Vietnam and normalized relations between the two countries in 1994,
             after 5 years of research and market exploration, Zippo officially
             entered the Vietnamese market in 1999. ONE THANH COMPANY LIMITED
             VIEN AM VIET was selected as the main partner and representative of
-            Zippo in Vietnam under the name Zippo Vietnam.
+            Zippo in Vietnam under the name Zippo Vietnam. */}
           </div>
         </div>
 

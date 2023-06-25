@@ -4,6 +4,7 @@
   padding: 40px 0;
   position: relative;
   background-image: linear-gradient(to right, #642b73, #c6426e);
+
   @include md {
     height: 100vh;
   }

@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Form, useParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Form, Link, useParams } from "react-router-dom";
 import AppConText, { ConText } from "../../context/AppConText";
 import "./Details.scss";
 import { FaFacebookF, FaInstagram, FaCartPlus } from "react-icons/fa";
@@ -7,17 +7,49 @@ import Realated from "./related/Related";
 import Related from "./related/Related";
 export default function Details() {
   const { id } = useParams();
-  const [products, setProducts] = useContext(ConText);
-
+  const value = useContext (ConText)
+  const [cart, setCart] =value.cart;
+  const [products] =value.products
+  const handleAddToCart= value.handleAddToCart;
+  const ScrollToTop=value.ScrollToTop;
   const details = products.filter((product, index) => {
     return product.id === id;
   });
-
+  
   console.log(details);
+  const [quantity, setQuantity] = useState(1);
+  
+  const increment = () => {
+    setQuantity((prev) => prev + 1)
+  }
+
+  const decrement = () => {
+    setQuantity ((prev) => {
+      if (prev === 1 ) return 1;
+      return prev-1;
+    })
+  }
+  // const reduction = id =>{
+  //   cart.forEach (item =>{
+  //     if (item.id === id){
+  //       item.count === 1 ? item.count=1 : item.count -=1;
+  //     }
+  //   })
+  //   setCart([...cart])
+  // }
+
+  // const increase = id => {
+  //   cart.forEach(item => {
+  //     if (item.id === id) {
+  //       item.count += 1 
+  //     }
+  //   })
+  //   setCart([...cart])
+  // }
   return (
     <>
       {details.map((product) => (
-        <div className="single-product-main-content">
+        <div className="single-product-main-content" key={product.id}>
           <div className="layout">
             <div className="single-product-page">
               <div className="left">
@@ -25,19 +57,19 @@ export default function Details() {
               </div>
               <div className="right">
                 <span className="name">{product.title}</span>
-                <span className="price">{product.price}</span>
+                <span className="price">$ {product.price}</span>
                 <span className="desc">{product.content}</span>
 
                 <div className="cart-buttons">
                   <div className="quantity-buttons">
-                    <span>-</span>
-                    <span>5</span>
-                    <span>+</span>
+                    <span onClick={decrement}>-</span>
+                    <span>{quantity}</span>
+                    <span onClick={increment}>+</span>
                   </div>
-                  <button className="add-to-cart-button">
+                  <div className="add-to-cart-button" onClick={() => handleAddToCart(product.id)}>
                     <FaCartPlus size={20} />
-                    ADD TO CART
-                  </button>
+                    <p> ADD TO CART</p>
+                </div>
                 </div>
                 <span className="divider" />
                 <div className="info-item">
@@ -59,6 +91,7 @@ export default function Details() {
           </div>
         </div>
       ))}
+      
       <Related/>
     </>
   );

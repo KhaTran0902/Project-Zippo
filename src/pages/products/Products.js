@@ -4,8 +4,9 @@ import { ConText } from "../../context/AppConText";
 import "./Products.scss";
 import { Link } from "react-router-dom";
 export default function Products() {
-  const [products, setProducts] = useContext(ConText);
-
+  const value=useContext(ConText)
+  const [products] =value.products
+  const handleAddToCart= value.handleAddToCart
   return (
     <div className="category-main-content">
       <div className="layout">
@@ -14,7 +15,7 @@ export default function Products() {
           <div className="sec-heading">Popular products</div>
           <div className="products">
             {products.map((product) => (
-              <div className="products-card" key={product._id}>
+              <div className="products-card" key={product.id}>
                 <div className="thumbnail">
                   <Link to={`/products/${product.id}`}>
                     <img src={product.img} />
@@ -23,7 +24,8 @@ export default function Products() {
 
                 <div className="prod-details">
                   <span className="name">{product.title}</span>
-                  <span className="price">$ {product.price}</span>
+                  <span className="price"> $ {product.price}</span>
+                
                 </div>
               </div>
             ))}

@@ -1,9 +1,10 @@
-import React  from "react";
+import { useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function Wrapper ({children, className}) {
-    return (
-        <div className={`w-full max-w-[1280px] px-5 md:px-10 mx-auto ${className || ""} `}>
-            {children}
-        </div>
-    )
+export default function Wrapper({ children }) {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
 }
