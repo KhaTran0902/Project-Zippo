@@ -3,15 +3,13 @@ import "./Cart.scss";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { ConText } from "../../context/AppConText";
-
-
+import cartempty from "../../assets/empty-cart.jpg";
+import { Link } from "react-router-dom";
 export default function Cart() {
   const value = useContext(ConText);
   const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);
   const [count, setCount] = useState(0);
-
-
 
   useEffect(() => {
     const getTotal = () => {
@@ -62,7 +60,24 @@ export default function Cart() {
 
   return (
     <div>
-      {cart.length < 1 && <div> Emty cart </div>}
+      {cart.length < 1 && (
+        <div className="cart-empty">
+          <img src={cartempty} alt="" className="cart-empty-img" />
+          <br/>
+          <span className="cart-empty-title">
+            {" "}
+            Your cart is empty
+            <br />
+            Looks like you have not added anything in your cart.
+            <br />
+            Go ahead and explore top categories.
+            <br />
+            <Link to="/products">
+              <button className="cart-empty_btn">Countinue Shopping</button>
+            </Link>
+          </span>
+        </div>
+      )}
       {cart.length > 0 && (
         <section className="h-100 gradient-custom">
           <div className="container py-5">
@@ -163,7 +178,6 @@ export default function Cart() {
                     <button
                       type="button"
                       className="btn btn-primary btn-lg btn-block"
-                      
                     >
                       Go to checkout
                     </button>

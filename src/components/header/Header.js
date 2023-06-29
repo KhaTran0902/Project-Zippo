@@ -6,7 +6,7 @@ import { CgShoppingCart } from "react-icons/cg";
 import { useEffect, useState } from "react";
 
 import { ConText } from "../../context/AppConText";
-// import Search from "../search/Search";
+
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
@@ -18,7 +18,18 @@ export default function Header() {
   const [cart] = value.cart;
   const [showSearch, setShowSearch] = useState(false);
   const [mobile, setMobile] = useState(false);
-
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
   {
     /* <header className={`main-header ${scrolled ? "sticky-header" : " "} `}>
       <div className="header-content">
@@ -48,7 +59,7 @@ export default function Header() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "sticky-header" : " "} `}>
       <div className="navbar_container1">
         <div className="img__logo">
           <img src={logo} alt="" width="100px" />

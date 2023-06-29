@@ -14,7 +14,7 @@ export default function ProductPopular() {
           <div className="prod-details">
             <span className="name">{item.title}</span>
             <span className="price">$ {item.price}</span>
-           <button className="cart">Add To Cart</button>
+        
           </div>
         </div>
       ))}

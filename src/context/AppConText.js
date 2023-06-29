@@ -42,6 +42,7 @@ const AppConText = ({ children }) => {
     {
       id: "02",
       title: "Butterfly Design",
+      title1: "Universal Zippo",
       price: 40.45,
       img: zip2,
       content:
@@ -53,6 +54,7 @@ const AppConText = ({ children }) => {
     {
       id: "03",
       title: "Tree Life Design",
+      title1: "Universal Zippo",
       price: 35.5,
       img: zip3,
       content:
@@ -185,7 +187,7 @@ const AppConText = ({ children }) => {
     {
       id: "14",
       title: "Armor® Tree of Life",
-      title1: "Cao cấp",
+      title1: "Premium Zippo",
       price: 97.0,
       img: zip14,
       content:
@@ -282,9 +284,9 @@ const AppConText = ({ children }) => {
     },
   ]);
   const [cart, setCart] = useState([]);
-
- 
-
+  const [filterItem, setFilterItem] = useState ([])
+  const [datafilter, setDataFilter] = useState ([])
+  // local storage
   useEffect(() => {
     if (cart?.length > 0) {
       ls?.setItem("cart", JSON.stringify(cart));
@@ -295,10 +297,8 @@ const AppConText = ({ children }) => {
       setCart(JSON.parse(ls.getItem("cart")));
     }
   }, []);
-  // const[cartCount, setCartCount] = useState(0)
-  // const[cartSubTotal,setCartSubTotal] = useState(0)
-  // const location= useLocation()
 
+  // add cart
   const handleAddToCart = (id) => {
     const check = cart.every((item) => {
       return item.id !== id;
@@ -313,30 +313,38 @@ const AppConText = ({ children }) => {
     }
   };
 
-  // const handleAddToCart = (product, quantity) => {
-  //   let items = [...cart];
-  //   let index = items.findIndex((p) => p.id === product.id);
-  //   if (index !== -1) {
-  //     items[index].attributes.quantity += quantity;
-  //   } else {
-  //     product.attributes.quantity = quantity;
-  //     items = [...items, product];
-  //   }
-  //   setCart(items);
-  // };
 
+// scroll animation
   useEffect(() => {
     AOS.init({ duration: 2500 });
   }, []);
   
+// filter 
+  // const filteredProduct = products.filter (product => {
+  //   filterItem === "Universal Zippo"
+  //   ? product.
+  // })
+  useEffect(() => {
+    setDataFilter(products);
+    setFilterItem([...new Set(products.map((item) => item.title1))]);
+  }, []);
+
+  const gallery__filter = (itemData) => {
+    const fillterItems = products.filter((item) => item.title1 == itemData);
+    setDataFilter(fillterItems);
+  };
+
+
   const value = {
     products: [products, setProducts],
     cart: [cart, setCart],
     handleAddToCart: handleAddToCart,
+    gallery__filter:gallery__filter,
+    setDataFilter:setDataFilter,
+    filterItem:filterItem,
+    datafilter:datafilter,
   };
-
-  // const handleRemoveFromCart = (product, quantity) => {}
-  // const handleCartProductQuantity = (type, quantity) => {}
+ 
   return <ConText.Provider value={value}>{children}</ConText.Provider>;
 };
 

@@ -10,8 +10,10 @@ li{
     background-color: #212121;
     position: sticky;
     top:0;
+    left:0;
     z-index: 99;
 }
+
 .img_logo img{
   width: 10px;
 }
@@ -42,7 +44,9 @@ li{
     text-decoration: none;
 
 }
-
+.search-icon li svg{
+    cursor: pointer;
+}
  button {
     border: none;
     background: none;

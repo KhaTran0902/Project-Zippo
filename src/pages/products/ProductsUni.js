@@ -1,27 +1,15 @@
 import React from "react";
-import { useContext } from "react";
-import { ConText } from "../../context/AppConText";
-import "./Products.scss";
+import { Uni } from "../../components/fetchdata/Data";
 import { Link } from "react-router-dom";
-
-import CategoryFilter from "./CategoryFilter";
-export default function Products() {
-  const value=useContext(ConText)
-
-  const handleAddToCart= value.handleAddToCart
-  const datafilter=value.datafilter
-  return (
-    <>
-    
-    <div className="category-main-content">
+export default function ProductsUni () {
+    return (
+        <div className="category-main-content">
       <div className="layout">
-        <div className="category-title">Category title</div>
-        
+        <div className="category-title">Our Store</div>
         <div className="products-container">
-          <div className="sec-heading">Popular products</div>
-          <CategoryFilter/>
+          <div className="sec-heading">Universal Zippo</div>
           <div className="products">
-            {datafilter.map((product) => (
+            {Uni.map((product) => (
               <div className="products-card" key={product.id}>
                 <div className="thumbnail">
                   <Link to={`/products/${product.id}`}>
@@ -40,6 +28,5 @@ export default function Products() {
         </div>
       </div>
     </div>
-    </>
-  );
+    )
 }

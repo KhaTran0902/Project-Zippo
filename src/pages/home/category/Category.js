@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import category1 from "../../../assets/category1.jpg";
 import category2 from "../../../assets/category2.png";
 import category3 from "../../../assets/category3.jpg";
@@ -8,7 +9,10 @@ export default function Category() {
       <div className="categories">
        
         <div className="category">
+          <Link to="/products/uni">
           <img src={category3} alt="" />
+          </Link>
+       
           <div className="category_title">Universal Zippo</div>
         </div>
 

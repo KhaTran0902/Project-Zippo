@@ -1,3 +1,4 @@
+import zip1 from "../../assets/zip1.png"
 import zip2 from "../../assets/zip2.png"
 import zip3 from "../../assets/zip3.png"
 import zip4 from "../../assets/zip4.png"
@@ -151,4 +152,113 @@ export const Data1 =[
       height: "2.25″ ",
       width: "0.5″",
 }
+]
+
+export const Uni = [
+  {
+    id: "01",
+    title: "Floral Gorilla Design",
+    title1: "Universal Zippo",
+    price: 36.95,
+    img: zip1,
+    content:
+      "Biểu thị sức mạnh, trí tuệ và tinh thần nuôi dưỡng, một con khỉ đột dũng mãnh nhưng yên tĩnh là trọng tâm của chiếc bật lửa Flat Grey mượt mà này. Người khổng lồ hiền lành được bao quanh bởi những bông hoa và thực vật tinh tế trong thiết kế Hình ảnh màu hai mặt nhẹ nhàng này. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "02",
+    title: "Butterfly Design",
+    price: 40.45,
+    img: zip2,
+    content:
+      "Sẵn sàng cho chuyến bay đầu tiên, một con bướm tuyệt đẹp tinh tế mở rộng đôi cánh của nó xung quanh tất cả các mặt của chiếc bật lửa 540 tuyệt đẹp này. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "03",
+    title: "Tree Life Design",
+    price: 35.5,
+    img: zip3,
+    content:
+      "Quy trình In Kết cấu mang tính biểu tượng của chúng tôi mang lại cho Cây Sự sống sống động trên chiếc bật lửa White Matte này. Những chiếc lá tươi tốt nhường chỗ cho rễ cây sống động như thật trong thiết kế ba chiều hữu cơ thú vị này. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "04",
+    title: "Red Moon Desgin ",
+    title1: "Universal Zippo",
+    price: 28.95,
+    img: zip4,
+    content:
+      "Một mặt trăng màu nước tuyệt đẹp rực sáng đằng sau một họa tiết hoa tinh tế trên chiếc bật lửa White Matte cổ điển này. Một vài đám mây kéo dài và những con chim kỳ quái nhấn mạnh thiết kế Hình ảnh màu thanh bình. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "05",
+    title: "Howdy Cowboy",
+    title1: "Universal Zippo",
+    price: 32.95,
+    img: zip5,
+    content:
+      "Chiếc bật lửa White Matte cổ điển này đã sẵn sàng cho thời gian vui vẻ của boot-scootin. Đôi đá yêu thích của bạn, một chiếc mũ mới sắc nét và một quả bóng disco rực rỡ xuất hiện trong thiết kế Hình ảnh màu và Khắc laser, vì vậy bạn có thể mang cuốc xuống bất cứ nơi nào bạn đi lang thang. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "06",
+    title: "Lizard Fusion",
+    title1: "Universal Zippo",
+    price: 32.95,
+    img: zip6,
+    content:
+      "Một con thằn lằn nhàn nhã trên bề mặt chiếc bật lửa High Polish Brass rực rỡ này. Quy trình Fusion của chúng tôi được sử dụng để mô tả loài bò sát thư giãn với màu sắc rực rỡ với các vết phá vỡ kim loại đặc trưng cho hiệu ứng ánh kim, lung linh. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "07",
+    title: "Abstract Faces Design",
+    title1: "Universal Zippo",
+    price: 40.45,
+    img: zip7,
+    content:
+      "This 540 Color lighter showcases a seamless series of abstract line portraits and botanicals over a soothing watercolor backdrop for a contemporary take on a timeless genre. Comes packaged in a gift box. For optimal performance, fill with Zippo lighter fuel.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "08",
+    title: "Boxing Design",
+    title1: "Universal Zippo",
+    price: 32.95,
+    img: zip8,
+    content:
+      "Chiếc bật lửa này gói một cú đấm. Cho dù bạn tham gia vào môn thể thao này hay chỉ chiêm ngưỡng những người vĩ đại, thiết kế trên chiếc bật lửa White Matte này sẽ khiến bạn nổi như một con bướm. Một đôi găng tay ba chiều nhô lên khỏi bề mặt bằng cách sử dụng các quy trình In kết cấu và Hình ảnh màu của chúng tôi. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
+  {
+    id: "09",
+    title: "Graffiti Peace Design",
+    title1: "Universal Zippo",
+    price: 28.95,
+    img: zip9,
+    content:
+      "Graffiti đang đi từ đường phố đến bật lửa chống gió yêu thích của bạn. Thiết kế nghệ thuật này miêu tả một bàn tay đưa ra dấu hiệu hòa bình, đã được chụp ảnh màu trên bật lửa Iron Stone gồ ghề, giống như nghệ thuật đường phố trên một bức tường đá. Đi kèm đóng gói trong một hộp quà tặng. Để có hiệu suất tối ưu, hãy đổ đầy nhiên liệu nhẹ hơn Zippo.      ",
+    height: "2.25″ ",
+    width: "0.5″",
+    count: 1,
+  },
 ]
