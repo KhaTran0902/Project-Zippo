@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AiOutlineHeart } from "react-icons/ai";
+
 import { TbSearch } from "react-icons/tb";
 import { CgShoppingCart } from "react-icons/cg";
 // // import "./Header.scss";
@@ -30,33 +30,8 @@ export default function Header() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
-  {
-    /* <header className={`main-header ${scrolled ? "sticky-header" : " "} `}>
-      <div className="header-content">
-        <ul className="left">
-          <Link to="/">
-          <li>Home</li>
-          </Link>
-          <li>About</li>
-          <Link to="/products">
-          <li>Categories</li>
-          </Link>
-        </ul>
-        <div className="center">Logo</div>
-        <div className="right">
-          <TbSearch onClick={() => setShowSearch(true)} />
-          <AiOutlineHeart />
-          <span className="cart-icon">
-            <Link to='/cart' className="link_cart">
-            <CgShoppingCart />
-            <span>{cart.length}</span>
-            </Link>
-          </span>
-        </div>
-      </div>
-    </header>
-   { showSearch &&  <Search setShowSearch={setShowSearch} />} */
-  }
+  
+   
 
   return (
     <nav className={`navbar ${scrolled ? "sticky-header" : " "} `}>
@@ -72,8 +47,8 @@ export default function Header() {
           <Link to="/">
             <li>Home</li>
           </Link>
-          <Link to="/">
-            <li>About</li>
+          <Link to="/contact">
+            <li>Contact US</li>
           </Link>
           <Link to="/products">
             <li>Products</li>

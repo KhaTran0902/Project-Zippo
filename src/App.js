@@ -9,6 +9,8 @@ import Details from "./pages/details/Details";
 import Cart from "./pages/cart/Cart";
 import Wrapper from "./components/Wrapper";
 import ProductsUni from "./pages/products/ProductsUni";
+import Support from "./components/support/Support";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -19,12 +21,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/products/:id" element={<Details />} />
           <Route path="products/uni" element= {<ProductsUni/>}/>
           <Route path="/cart" element={<Cart />} />
         </Routes>
-  
+        <Support/>
       <NewsLetter />
+      
       <Footer />
       </Wrapper>
     </>
